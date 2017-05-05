@@ -28,7 +28,20 @@
 	       	function myFunction() {
 	       		var editor = CKEDITOR.instances['ed'];
 	       		
-		         var noidung = editor.document.getBody().getText();
+	       	 var noidung = editor.document.getBody().getText();
+	          $.ajax({
+	        	    type : "POST",
+	        	    url : "/upload",
+	        	    data : {
+	        	        noidung:noidung
+	        	    },
+	        	    success : function(response){
+	        	    	window.location.href = "/"+response;
+	        	    }
+	        	});
+	         
+	          
+		         /* var noidung = editor.document.getBody().getText();
 		          $.ajax({
 		        	    type : "POST",
 		        	    url : "/upload",
@@ -37,7 +50,7 @@
 		        	    },
 		        	});
 		         
-		           window.location.href = "/uploadck";  
+		           window.location.href = "/uploadck";   */
 			}
 	       </script>
 	       

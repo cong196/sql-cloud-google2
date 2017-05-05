@@ -5,6 +5,7 @@ public class ChuoiKetNoi {
 	public String name="root";
 	
 	public String pass="";
+	
 	//public String pass="dtdmnhom3";
 	
 	/* String sql = String.format(

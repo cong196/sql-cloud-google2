@@ -36,19 +36,28 @@ public class HelloController {
     }
     
     @RequestMapping(value ="/upload")
+    @ResponseBody 
     public String uploadck(Model model,@RequestParam("noidung") String noidung) {
-    	
+    	try{
 	    	GetNoiDungCKeditor set = new GetNoiDungCKeditor();
 	    	set.CapNhat(noidung);
-	    	
-        return "/uploadck";
+	    	return "uploadck";
+    	}
+    	catch (Exception e) {
+    		return "thatbai";
+		}
+        
     }
     
-    @RequestMapping(value ="/uploadck")
+    @RequestMapping(value ="/thatbai")
     public String uploadck1() {
+        return "uploadthatbai";
+    }
+    @RequestMapping(value ="/uploadck")
+    public String uploadckthanhcong() {
     	
     	
-        return "/uploadck";
+        return "uploadck";
     }
     
   
