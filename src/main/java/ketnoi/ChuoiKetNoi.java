@@ -6,7 +6,7 @@ public class ChuoiKetNoi {
 	
 	 String sql = String.format(
 		        "jdbc:mysql://google/%s?cloudSqlInstance=%s&"
-		            + "socketFactory=com.google.cloud.sql.mysql.SocketFactory", "dtdmnhom3","baitapnhom3-sql:asia-northeast1:dtdmnhom3");
+		            + "socketFactory=com.google.cloud.sql.mysql.SocketFactory", "dtdmnhom3","dientoan-nhom3-chieut6:asia-northeast1:dtdmnhom3");
 	
 	public String getSQL()
 	{
